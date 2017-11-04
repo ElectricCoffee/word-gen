@@ -18,4 +18,14 @@ impl<'a> SyntaxRule<'a> {
     }
 }
 
+
+impl<'a> Syntax<'a> for str {
+    /// to_syntax takes a str and returns a Syntax rule
+    ///
+    /// This function is meant as the dual of SyntaxRule::from("foo").
+    /// Much like how you can write both String::from("foo") and "foo".to_string(),
+    /// This allows you to write both SyntaxRule::from("foo") and "foo".to_syntax()
+    fn to_syntax(&'a self) -> SyntaxRule<'a> {
+        SyntaxRule::from(self)
+    }
 }
