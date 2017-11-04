@@ -1,3 +1,8 @@
+/// The Syntax trait is to enable one to convert their data into a syntax rule
+pub trait Syntax<'a> {
+    fn to_syntax(&'a self) -> SyntaxRule<'a>;
+}
+
 pub enum SyntaxRule<'a> {
     Id(&'a str), // anything that isn't any of the following
     Opt(Box<SyntaxRule<'a>>), // the ? operator
