@@ -8,5 +8,9 @@ pub enum SyntaxRule<'a> {
 }
 
 impl<'a> SyntaxRule<'a> {
+    pub fn from(input: &'a str) -> SyntaxRule<'a> {
+        panic!("Not yet implemented!")
+    }
+}
 
 }
