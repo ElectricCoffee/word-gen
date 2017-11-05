@@ -1,2 +1,21 @@
 * Word-Gen, a Word Generator for Rust.
 
+** Premise
+
+Word-Gen is a library for randomly generating words.
+
+You give it a set of symbols and a set of rules for how to supply these symbols, and out pops a brand new randomly generated word!
+
+The rules are written as a regex-like expression a-la =CVVC=, where =C= and =V= are sets of symbols, in this case Consonants and Vowels, and out pop words like "bear", "reef", "feed", "road", and even non-words like "biiq" and "qius".
+
+The library is set to support the following operations:
+
+- =[abc]=: alternatives
+- =(abc)=: grouping
+- =a?=: optionals
+- =a*=: 0 or more
+- =a+=: 1 or more
+
+More might get added as need be.
+
+Note that since this isn't meant to be actual regular expressions, =()= will not perform capturing.
